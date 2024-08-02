@@ -1,0 +1,55 @@
+Reference Implementation of the HPL-AI Benchmark
+Please visit http://www.icl.utk.edu/research/hpl-ai for more details.
+
+===============================================================================================
+This is a revised reference implementation for LU-GMRES linear solver. 
+It is used for the National Computer System Development Capability Competition.
+-> Compiler System Challenge(Huawei BiSheng Cup, 2024)
+Please visit https://compiler.educg.net/#/index?TYPE=COM_C for more details.
+===============================================================================================
+
+To boostrap the configuration files make sure you have GNU Autotools installed and type:
+
+```
+autoreconf -ivf
+```
+
+To configure the build and prepare for compilation run:
+
+```
+./configure
+```
+
+Use `--help` option to see the available settings.
+
+To compile and run the benchmark executable:
+
+```
+$ make
+$ ./hpl-ai <TestNum> <MinMatSize> <MaxMatSize>
+```
+* <TestNum>: teste matrices number;
+* <MinMatSize>: minimum matrix size;
+* <MaxMatSize>: maximum matrix size.
+
+Example output:
+
+```
+>> ./hpl-ai 10 128 1280
+===============================Test Results==================================
+                       (After Five-time Averaging)
+Passing Rate: 100.00%
+n = 128, Performance =   1.6056 Gflops, MemUsage =   1.4856 MB
+n = 256, Performance =   2.1185 Gflops, MemUsage =   2.5072 MB
+n = 384, Performance =   2.5000 Gflops, MemUsage =   3.8568 MB
+n = 512, Performance =   2.4554 Gflops, MemUsage =   5.6624 MB
+n = 640, Performance =   2.4678 Gflops, MemUsage =   7.8904 MB
+n = 768, Performance =   2.4438 Gflops, MemUsage =  10.6984 MB
+n = 896, Performance =   2.4775 Gflops, MemUsage =  14.1400 MB
+n = 1024, Performance =   2.5309 Gflops, MemUsage =  17.8992 MB
+n = 1152, Performance =   2.5145 Gflops, MemUsage =  22.2896 MB
+n = 1280, Performance =   2.5377 Gflops, MemUsage =  27.5224 MB
+===============================Test Results==================================
+```
+
+SPDX-License-Identifier: BSD 3-Clause Clear License

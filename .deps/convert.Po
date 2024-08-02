@@ -1,0 +1,3 @@
+convert.o: convert.c /usr/include/stdc-predef.h hpl-ai.h
+/usr/include/stdc-predef.h:
+hpl-ai.h:
